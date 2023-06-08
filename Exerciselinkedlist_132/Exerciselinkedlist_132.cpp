@@ -108,10 +108,10 @@ void CircularLinkedList::traverse() {
 	}
 	else {
 		cout << "\nRecords in the list are:\n";
-		Node* DewiNode = LAST->next;
-		while (DewiNode != LAST) {
-			cout << DewiNode->rollNumber << " " << DewiNode->name << endl;
-			DewiNode = DewiNode->next;
+		Node* currentNode = LAST->next;
+		while (currentNode != LAST) {
+			cout << currentNode->rollNumber << " " << currentNode->name << endl;
+			currentNode = currentNode->next;
 		}
 		cout << LAST->rollNumber << " " << LAST->name << endl;
 	}
@@ -148,7 +148,7 @@ int main() {
 			}
 			}
 		}
-		catch (excetption& e) {
+		catch (exception& e) {
 			cout << e.what() << endl;
 		}
 	}
